@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:horizontal_card_pager/card_item.dart';
+import 'package:horizontal_card_pager/horizontal_card_pager.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 
 import 'constant/constant.dart';
@@ -171,9 +173,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Expanded(
               child: Container(
-                child: VerticalCardPager(
-                  titles: titles,
-                  images: images,
+                child: HorizontalCardPager(
+                 items[CardItem]: images,
                   onPageChanged: (page) {},
                   onSelectedItem: (index) {
                     Navigator.push(

@@ -29,22 +29,6 @@ class _MyAppState extends State<MyApp> {
         text: "Add",
         iconData: Icons.add,
       ),
-      IconTitleCardItem(
-        text: "Call",
-        iconData: Icons.add_call,
-      ),
-      IconTitleCardItem(
-        text: "WiFi",
-        iconData: Icons.wifi,
-      ),
-      IconTitleCardItem(
-        text: "File",
-        iconData: Icons.attach_file,
-      ),
-      IconTitleCardItem(
-        text: "Air Play",
-        iconData: Icons.airplay,
-      ),
     ];
 
     return MaterialApp(

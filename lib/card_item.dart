@@ -52,7 +52,7 @@ class IconTitleCardItem extends CardItem {
         Opacity(
           opacity: iconTextOpacity,
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -61,7 +61,7 @@ class IconTitleCardItem extends CardItem {
                       blurRadius: 6)
                 ],
                 color: selectedBgColor,
-                borderRadius: BorderRadius.all(Radius.circular(20))),
+                borderRadius: BorderRadius.all(Radius.circular(30))),
             child: Column(
               children: [
                 Expanded(
@@ -96,7 +96,7 @@ class IconTitleCardItem extends CardItem {
                       blurRadius: 6),
                 ],
                 color: noSelectedBgColor,
-                borderRadius: BorderRadius.all(Radius.circular(20))),
+                borderRadius: BorderRadius.all(Radius.elliptical(50, 50))),
             padding: EdgeInsets.all(10),
             child: FittedBox(
               fit: BoxFit.fill,
