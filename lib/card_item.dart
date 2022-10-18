@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:vimeo_player_flutter/vimeo_player_flutter.dart';
 
 abstract class CardItem {
   Widget? buildWidget(double diffPosition);
@@ -23,6 +24,7 @@ class IconTitleCardItem extends CardItem {
   final Color noSelectedBgColor;
   final Color selectedIconTextColor;
   final Color noSelectedIconTextColor;
+  final VimeoPlayer vimeoPlayer;
 
   IconTitleCardItem(
       {this.iconData,
@@ -30,7 +32,8 @@ class IconTitleCardItem extends CardItem {
       this.selectedIconTextColor = Colors.white,
       this.noSelectedIconTextColor = Colors.grey,
       this.selectedBgColor = Colors.blue,
-      this.noSelectedBgColor = Colors.white});
+      this.noSelectedBgColor = Colors.white,
+      required this.vimeoPlayer});
 
   @override
   Widget buildWidget(double diffPosition) {
@@ -67,10 +70,7 @@ class IconTitleCardItem extends CardItem {
                 Expanded(
                   child: FittedBox(
                     fit: BoxFit.fill,
-                    child: Icon(
-                      iconData,
-                      color: selectedIconTextColor,
-                    ),
+                    child: vimeoPlayer,
                   ),
                 ),
                 FittedBox(
